@@ -1,0 +1,6 @@
+.idea/dictionaries/
+.idea/workspace.xml
+.tmp/
+bower_components/
+dist/
+node_modules/
