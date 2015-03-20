@@ -1,0 +1,151 @@
+<div class="navbar-container">
+
+  <!-- BRAND LOGO & TEXT -->
+  <div class="navbar-header">
+    <a ui-sref="chat" class="navbar-brand">
+      <img alt="unchatbar" src="images/logo-light.png" class="brand-icon">
+          <span class="brand-title">
+            <span class="brand-text">unchatbar</span>
+          </span>
+    </a>
+  </div>
+  <!-- END OF BRAND LOGO & TEXT -->
+
+  <!-- CONTENT -->
+  <div class="navbar-content clearfix">
+    <ul class="nav navbar-nav navbar-top pull-left">
+
+      <!-- TOGGLE BUTTON -->
+      <li class="toggle-button">
+        <a href="#">
+          <i class="fa fa-navicon fa-lg"></i>
+        </a>
+      </li>
+      <!-- END OF TOGGLE BUTTON -->
+
+      <!-- MESSAGES DROPDOWN -->
+      <li class="dropdown" dropdown>
+
+        <!-- Dropdown button -->
+        <a href="#" class="dropdown-toggle" dropdown-toggle>
+          <i class="fa fa-envelope fa-lg"></i>
+          <span class="badge badge-primary">4</span>
+        </a>
+
+        <!-- Dropdown menu -->
+        <ul class="dropdown-menu dropdown-menu-md dropdown-menu-left with-arrow" role="menu">
+          <li class="dropdown-header pad-all">
+            <span class="text-lg text-muted text-thin">You have 4 messages</span>
+          </li>
+          <li class="divider mar-no"></li>
+          <li>
+            <a class="media" href="#">
+              <span class="media-left">
+                <img class="img-circle img-sm" src="images/agent-coulson.png" alt="Profile Picture">
+              </span>
+
+              <div class="media-body">
+                <div class="text-nowrap">Agent Coulson sent you a message</div>
+                <small class="text-muted">some secondy ago</small>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="media" href="#">
+              <span class="media-left">
+                <img class="img-circle img-sm" src="images/black-widow.png" alt="Profile Picture">
+              </span>
+
+              <div class="media-body">
+                <div class="text-nowrap">Black widow sent you a message</div>
+                <small class="text-muted">3 minutes ago</small>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="media" href="#">
+                  <span class="media-left">
+                    <img class="img-circle img-sm" src="images/captain-america.png" alt="Profile Picture">
+                  </span>
+
+              <div class="media-body">
+                <div class="text-nowrap">Captain Americs sent you a message</div>
+                <small class="text-muted">5 minutes ago</small>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="media" href="#">
+                  <span class="media-left">
+                    <img class="img-circle img-sm" src="images/giant-man.png" alt="Profile Picture">
+                  </span>
+
+              <div class="media-body">
+                <div class="text-nowrap">Giant Man sent you a message</div>
+                <small class="text-muted">15 minutes ago</small>
+              </div>
+            </a>
+          </li>
+          <li class="divider mar-no"></li>
+          <li class="pad-all">
+            <div>
+              <a href="#" class="btn btn-sm btn-warning btn-labeled fa fa-trash icon-lg">Clear</a>
+            </div>
+          </li>
+        </ul>
+
+      </li>
+      <!-- END OF MESSAGES DROPDOWN -->
+
+    </ul>
+    <ul class="nav navbar-nav navbar-top pull-right">
+
+      <!-- USER DROPDOWN -->
+      <li class="dropdown dropdown-user" dropdown>
+
+        <!-- Dropdown button -->
+        <a href="#" class="dropdown-toggle" dropdown-toggle>
+          <span class="hidden-xs text-user">Thor</span>
+          <img class="img-circle img-user" src="images/thor.png" alt="Profile Picture">
+        </a>
+
+        <!-- Dropdown menu -->
+        <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right with-arrow" role="menu">
+          <li class="dropdown-header pad-all">
+            <span class="text-lg text-muted text-thin">User settings</span>
+          </li>
+          <li class="divider mar-no"></li>
+          <li class="pad-hor pad-top">
+            <form>
+              <div class="form-group">
+                <label for="display-name">Display name</label>
+                <input type="text" required="true" class="form-control" id="display-name"
+                       placeholder="Enter display name">
+              </div>
+              <div class="form-group">
+                <label for="user-name">User name</label>
+                <input type="text" readonly="true" class="form-control" id="user-name" value="thor">
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="text" readonly="true" class="form-control" id="password" value="0123456789abcdef">
+              </div>
+            </form>
+          </li>
+          <li class="divider mar-no"></li>
+          <li class="pad-all">
+            <div>
+              <a href="#" class="btn btn-sm btn-success btn-labeled pull-right fa fa-save icon-lg">Save</a>
+              <a ui-sref="login" class="btn btn-sm btn-primary btn-labeled fa fa-sign-out icon-lg">Logout</a>
+            </div>
+          </li>
+        </ul>
+
+      </li>
+      <!-- END OF USER DROPDOWN -->
+
+    </ul>
+  </div>
+  <!-- END OF CONTENT -->
+
+</div>

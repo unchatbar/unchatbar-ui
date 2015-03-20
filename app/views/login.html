@@ -1,13 +1,21 @@
-<div class="container" ng-controller="login">
+<div class="login" ng-controller="login">
 
-  <form class="form-signin">
-    <h2 class="form-signin-heading">Please sign in</h2>
-    <label for="peerId" class="sr-only">your Phonenumber</label>
-    <input type="text" id="peerId" class="form-control"
-           data-ng-model="peerId"
-           placeholder="Username" required autofocus>
-    <a class="btn btn-lg btn-success btn-block"
-       ui-sref="chat" role="button">Sign in</a>
+  <div class="page-header">
+    <h2>Please sign in</h2>
+  </div>
+
+  <form>
+    <div class="form-group">
+      <label class="sr-only" for="input-message">Your phone number</label>
+
+      <div class="input-group">
+        <input type="text" class="form-control input-lg" id="input-message" placeholder="Enter your phone number"
+               autocomplete="off">
+          <span class="input-group-btn">
+            <a ui-sref="chat" class="btn btn-primary btn-lg"><i class="fa fa-sign-in"></i></a>
+          </span>
+      </div>
+    </div>
   </form>
 
 </div>
