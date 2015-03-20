@@ -1,0 +1,35 @@
+/* NAVBAR */
+
+.navbar-fixed-bottom .navbar-container {
+  box-shadow: 0 -2px 0 -1px rgba(0, 0, 0, .1)
+}
+
+.navbar-footer {
+  background-color: #292c33
+}
+
+.navbar-add {
+  width: 250px
+}
+
+.navbar-message {
+}
+
+.navbar-form {
+  margin: 10px 0
+}
+
+.navbar-form .form-group,
+.navbar-form .input-group {
+  width: 100%
+}
+
+.navbar-form .input-group .input-group-btn {
+  width: 1%
+}
+
+@media (min-width: 768px) {
+  .navbar-footer {
+    float: left;
+  }
+}
