@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Chat controller', function () {
+describe('Dashboard controller', function () {
 
   // load the controller's module
   beforeEach(module('unchatbar'));
@@ -11,7 +11,7 @@ describe('Chat controller', function () {
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    chatController = $controller('chat', {
+    chatController = $controller('DashboardCtrl', {
       $scope: scope
     });
   }));

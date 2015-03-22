@@ -11,7 +11,7 @@ describe('Login controller', function () {
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    loginController = $controller('login', {
+    loginController = $controller('LoginCtrl', {
       $scope: scope
     });
   }));

@@ -1,4 +1,6 @@
 .sidebar-container {
+  box-shadow: 2px 0 0 -1px rgba(0, 0, 0, .1);
+  background-color: #3d424d;
   position: relative;
   height: 100%;
   width: 100%;
@@ -51,4 +53,10 @@
 
 .sidebar-tabset .list-group .list-group-item.disabled {
   opacity: .5
+}
+
+@media (min-width: 768px) {
+  .sidebar-container {
+    width: 250px
+  }
 }

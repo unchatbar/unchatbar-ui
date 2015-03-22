@@ -1,4 +1,4 @@
-<div class="navbar-container">
+<div class="navbar-container navbar-container-top">
 
   <!-- BRAND LOGO & TEXT -->
   <div class="navbar-header">
@@ -13,7 +13,7 @@
 
   <!-- CONTENT -->
   <div class="navbar-content clearfix">
-    <ul class="nav navbar-nav navbar-top pull-left">
+    <ul class="nav navbar-nav navbar-nav-top pull-left">
 
       <!-- TOGGLE BUTTON -->
       <li class="toggle-button">
@@ -38,51 +38,15 @@
             <span class="text-lg text-muted text-thin">You have 4 messages</span>
           </li>
           <li class="divider mar-no"></li>
-          <li>
+          <li data-ng-repeat="message in header.messages">
             <a class="media" href="#">
               <span class="media-left">
-                <img class="img-circle img-sm" src="images/agent-coulson.png" alt="Profile Picture">
+                <img class="img-circle img-sm" src="{{ message._links.avatar.href }}" alt="{{ message.sender }}">
               </span>
 
               <div class="media-body">
-                <div class="text-nowrap">Agent Coulson sent you a message</div>
-                <small class="text-muted">some secondy ago</small>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a class="media" href="#">
-              <span class="media-left">
-                <img class="img-circle img-sm" src="images/black-widow.png" alt="Profile Picture">
-              </span>
-
-              <div class="media-body">
-                <div class="text-nowrap">Black widow sent you a message</div>
-                <small class="text-muted">3 minutes ago</small>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a class="media" href="#">
-                  <span class="media-left">
-                    <img class="img-circle img-sm" src="images/captain-america.png" alt="Profile Picture">
-                  </span>
-
-              <div class="media-body">
-                <div class="text-nowrap">Captain Americs sent you a message</div>
-                <small class="text-muted">5 minutes ago</small>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a class="media" href="#">
-                  <span class="media-left">
-                    <img class="img-circle img-sm" src="images/giant-man.png" alt="Profile Picture">
-                  </span>
-
-              <div class="media-body">
-                <div class="text-nowrap">Giant Man sent you a message</div>
-                <small class="text-muted">15 minutes ago</small>
+                <div class="text-nowrap">{{ message.text }}</div>
+                <small class="text-muted">{{ message.date }}</small>
               </div>
             </a>
           </li>
@@ -98,7 +62,7 @@
       <!-- END OF MESSAGES DROPDOWN -->
 
     </ul>
-    <ul class="nav navbar-nav navbar-top pull-right">
+    <ul class="nav navbar-nav navbar-nav-top pull-right">
 
       <!-- USER DROPDOWN -->
       <li class="dropdown dropdown-user" dropdown>

@@ -18,9 +18,9 @@ angular.module('unchatbar')
           url: '/',
           templateUrl: '../views/login.html'
         })
-        .state('chat', {
-          url: '/chat',
-          templateUrl: '../views/chat.html'
+        .state('dashboard', {
+          url: '/dashboard',
+          templateUrl: '../views/dashboard.html'
         });
 
       $urlRouterProvider.otherwise('/');

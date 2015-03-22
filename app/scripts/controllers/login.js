@@ -2,13 +2,14 @@
 
 /**
  * @ngdoc function
- * @name unchatbar.controller:MainCtrl
+ * @name unchatbar.controller:LoginCtrl
  * @description
- * # MainCtrl
- * Controller of the unchatbar
+ * # LoginCtrl
+ *
+ * Controller of the unchatbar project
  */
 angular.module('unchatbar')
-  .controller('login', function ($scope) {
+  .controller('LoginCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

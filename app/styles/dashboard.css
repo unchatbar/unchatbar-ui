@@ -1,0 +1,31 @@
+.dashboard {
+  position: relative;
+  width: inherit;
+  height: inherit;
+  overflow: hidden
+}
+
+.navbar {
+  margin-bottom: 0;
+  border-width: 0
+}
+
+.sidebar {
+  position: relative;
+  height: 100%
+}
+
+.sidebar-fixed-left {
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  z-index: 1020;
+}
+
+.content {
+  position: relative;
+  padding: 50px 0 50px 250px;
+  height: 100%
+}

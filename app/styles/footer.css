@@ -1,22 +1,23 @@
-/* NAVBAR */
-
-.navbar-fixed-bottom .navbar-container {
+.navbar-container-bottom {
   box-shadow: 0 -2px 0 -1px rgba(0, 0, 0, .1)
 }
 
-.navbar-footer {
-  background-color: #292c33
+.navbar-container-bottom > .navbar-footer {
+  background-color: #292c33;
+  display: none
 }
 
-.navbar-add {
-  width: 250px
-}
-
-.navbar-message {
+.navbar-container-bottom > .navbar-content {
+  position: relative;
+  left: 0;
+  background-color: #fff;
+  padding: 0 5px
 }
 
 .navbar-form {
-  margin: 10px 0
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px
 }
 
 .navbar-form .form-group,
@@ -29,7 +30,13 @@
 }
 
 @media (min-width: 768px) {
-  .navbar-footer {
+  .navbar-container-bottom > .navbar-footer {
+    display: block;
     float: left;
+    width: 250px
+  }
+
+  .navbar-container-bottom > .navbar-content {
+    margin-left: 250px
   }
 }

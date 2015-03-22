@@ -1,12 +1,8 @@
-/* NAVBAR */
-
-.navbar-fixed-top .navbar-container {
+.navbar-container-top {
   box-shadow: 0 2px 0 -1px rgba(0, 0, 0, .1)
 }
 
-/* BRAND LOGO & TEXT */
-
-.navbar-header {
+.navbar-container-top > .navbar-header {
   background-color: #292c33
 }
 
@@ -44,24 +40,26 @@
   font-weight: 500
 }
 
-/* CONTENT */
-
-.navbar-content {
+.navbar-container-top > .navbar-content {
   position: relative;
   left: 0;
   background-color: #fff;
   padding: 0 10px
 }
 
-.navbar-top {
-  margin: 0
+.navbar-nav-top {
+  margin-top: 0;
+  margin-bottom: 0
 }
 
-.navbar-top > li {
-  float: left
+.navbar-nav-top .badge {
+  position: absolute;
+  font-size: 10px;
+  top: 10px;
+  right: 5px
 }
 
-.navbar-top > li > a {
+.navbar-nav-top > li > a {
   display: table-cell;
   vertical-align: middle;
   height: 50px;
@@ -69,66 +67,59 @@
   transition: all .3s
 }
 
-.navbar-top > li.toggle-button {
+.navbar-nav-top > li.toggle-button {
   position: absolute;
   top: -100%;
   right: 0
 }
 
-.navbar-top > li.toggle-button > a {
+.navbar-nav-top > li.toggle-button > a {
   color: #acaeb1
 }
 
-.navbar-top > li.toggle-button > a:focus,
-.navbar-top > li.toggle-button > a:hover {
+.navbar-nav-top > li.toggle-button > a:focus,
+.navbar-nav-top > li.toggle-button > a:hover {
   background-color: transparent
 }
 
-.navbar-top .badge {
-  position: absolute;
-  font-size: 10px;
-  top: 10px;
-  right: 5px
-}
-
-.dropdown-user > .dropdown-toggle {
+.navbar-nav-top > li.dropdown-user > a {
   padding: 0 10px
 }
 
-.dropdown-user > .dropdown-toggle .text-user {
+.navbar-nav-top > li.dropdown-user > a .text-user {
   margin: 0 5px
 }
 
-.dropdown-user > .dropdown-toggle .img-user {
+.navbar-nav-top > li.dropdown-user > a .img-user {
   width: 40px;
   height: 40px;
   margin: 5px
 }
 
-.navbar-top > li > .dropdown-menu {
+.navbar-nav-top > li > .dropdown-menu {
   margin: 10px 1px 1px 1px;
   padding: 0;
   border-color: #d0d0d0;
   box-shadow: 0 6px 12px rgba(0, 0, 0, .10)
 }
 
-.navbar-top > li > .dropdown-menu > li > a {
+.navbar-nav-top > li > .dropdown-menu > li > a {
   padding: 10px 15px
 }
 
-.navbar-top > li > .dropdown-menu-sm {
+.navbar-nav-top > li > .dropdown-menu-sm {
   width: 150px
 }
 
-.navbar-top > li > .dropdown-menu-md {
+.navbar-nav-top > li > .dropdown-menu-md {
   width: 300px
 }
 
-.navbar-top > li > .dropdown-menu-lg {
+.navbar-nav-top > li > .dropdown-menu-lg {
   width: 500px
 }
 
-.navbar-top > li > .dropdown-menu.with-arrow:before {
+.navbar-nav-top > li > .dropdown-menu.with-arrow:before {
   content: "";
   display: block;
   position: absolute;
@@ -142,7 +133,7 @@
   margin: -7px 0 0 15px
 }
 
-.navbar-top > li > .dropdown-menu.with-arrow:after {
+.navbar-nav-top > li > .dropdown-menu.with-arrow:after {
   content: "";
   display: block;
   position: absolute;
@@ -156,28 +147,28 @@
   margin: -6px 0 0 15px
 }
 
-.navbar-top > li > .dropdown-menu-right.dropdown-menu.with-arrow:before {
+.navbar-nav-top > li > .dropdown-menu-right.dropdown-menu.with-arrow:before {
   left: auto;
   right: 0;
   margin: -7px 25px 0 0
 }
 
-.navbar-top > li > .dropdown-menu-right.dropdown-menu.with-arrow:after {
+.navbar-nav-top > li > .dropdown-menu-right.dropdown-menu.with-arrow:after {
   left: auto;
   right: 0;
   margin: -6px 25px 0 0
 }
 
 @media (min-width: 768px) {
-  .navbar-content {
+  .navbar-container-top > .navbar-content {
     margin-left: 250px
   }
 
-  .navbar-top > li.toggle-button {
+  .navbar-nav-top > li.toggle-button {
     position: static
   }
 
-  .navbar-top > li.toggle-button > a {
+  .navbar-nav-top > li.toggle-button > a {
     color: #404040
   }
 }
