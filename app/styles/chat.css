@@ -15,11 +15,11 @@
   margin: 20px 0;
 }
 
-.media-left {
+.page-content .media-left {
   float: left
 }
 
-.media-right {
+.page-content .media-right {
   float: right
 }
 
