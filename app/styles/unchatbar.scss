@@ -1,0 +1,32 @@
+// fonts
+@import url("http://fonts.googleapis.com/css?family=Roboto");
+
+// variables
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+$fa-font-path: "../bower_components/components-font-awesome/fonts";
+
+// bower:scss
+@import "bootstrap-sass-only/scss/_bootstrap.scss";
+@import "components-font-awesome/scss/font-awesome.scss";
+// endbower
+
+// core extensions
+@import "unchatbar/scaffolding";
+@import "unchatbar/grid";
+@import "unchatbar/buttons";
+
+// component extensions
+@import "unchatbar/badges";
+@import "unchatbar/borders";
+@import "unchatbar/images";
+@import "unchatbar/margins";
+@import "unchatbar/paddings";
+@import "unchatbar/texts";
+
+// unchatbar
+@import "unchatbar/login";
+@import "unchatbar/dashboard";
+@import "unchatbar/header";
+@import "unchatbar/footer";
+@import "unchatbar/sidebar";
+@import "unchatbar/chat";

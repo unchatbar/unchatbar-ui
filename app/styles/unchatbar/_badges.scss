@@ -1,0 +1,38 @@
+.badge-default {
+  background-color: #e3e8ee;
+  color: #333
+}
+
+.badge-inverse {
+  background-color: #3b3e46
+}
+
+.badge-primary {
+  background-color: #458fd2
+}
+
+.badge-success {
+  background-color: #8cc152
+}
+
+.badge-info {
+  background-color: #3bb5e8
+}
+
+.badge-warning {
+  background-color: #feab34
+}
+
+.badge-danger {
+  background-color: #e9573f
+}
+
+.badge:empty.badge-icon {
+  display: inline-block;
+  width: .7em;
+  height: .7em;
+  padding: 0;
+  min-width: 5px;
+  margin: .3em .9em .3em .3em;
+  border-radius: 50%
+}

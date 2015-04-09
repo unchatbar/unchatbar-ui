@@ -1,4 +1,3 @@
-// Generated on 2015-02-02 using generator-angular 0.10.0
 'use strict';
 
 // # Globbing
@@ -47,9 +46,9 @@ module.exports = function (grunt) {
         files: ['test/spec/{,*/}*.js'],
         tasks: ['newer:jshint:test', 'karma']
       },
-      styles: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
-        tasks: ['newer:copy:styles', 'autoprefixer']
+      compass: {
+        files: ['<%= yeoman.app %>/styles/**/*.{scss,sass}'],
+        tasks: ['compass:server', 'autoprefixer']
       },
       gruntfile: {
         files: ['Gruntfile.js']
@@ -59,7 +58,6 @@ module.exports = function (grunt) {
           livereload: '<%= connect.options.livereload %>'
         },
         files: [
-          '<%= yeoman.app %>/chat/{,*/}*.html',
           '<%= yeoman.app %>/{,*/}*.html',
           '.tmp/styles/{,*/}*.css',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
@@ -111,12 +109,7 @@ module.exports = function (grunt) {
       dist: {
         options: {
           open: true,
-          base: '<%= yeoman.dist %>',
-          middleware: function () {
-            return [
-              modRewrite(['^[^\\.]*$ /index.html [L]']) // Matches everything that does not contain a '.' (period)
-            ];
-          }
+          base: '<%= yeoman.dist %>'
         }
       }
     },
@@ -175,7 +168,41 @@ module.exports = function (grunt) {
     wiredep: {
       app: {
         src: ['<%= yeoman.app %>/index.html'],
+        exclude: ['css/font-awesome.css'],
         ignorePath: /\.\.\//
+      },
+      sass: {
+        src: ['<%= yeoman.app %>/styles/**/*.{scss,sass}'],
+        ignorePath: /(\.\.\/){1,2}bower_components\//
+      }
+    },
+
+    // Compiles Sass to CSS and generates necessary files if requested
+    compass: {
+      options: {
+        sassDir: '<%= yeoman.app %>/styles',
+        cssDir: '.tmp/styles',
+        generatedImagesDir: '.tmp/images/generated',
+        imagesDir: '<%= yeoman.app %>/images',
+        javascriptsDir: '<%= yeoman.app %>/scripts',
+        fontsDir: '<%= yeoman.app %>/styles/fonts',
+        importPath: './bower_components',
+        httpImagesPath: '/images',
+        httpGeneratedImagesPath: '/images/generated',
+        httpFontsPath: '/styles/fonts',
+        relativeAssets: false,
+        assetCacheBuster: false,
+        raw: 'Sass::Script::Number.precision = 10\n'
+      },
+      dist: {
+        options: {
+          generatedImagesDir: '<%= yeoman.dist %>/images/generated'
+        }
+      },
+      server: {
+        options: {
+          debugInfo: true
+        }
       }
     },
 
@@ -226,7 +253,7 @@ module.exports = function (grunt) {
     // cssmin: {
     //   dist: {
     //     files: {
-    //       '<%= yeoman.dist %>/styles/custom.css': [
+    //       '<%= yeoman.dist %>/styles/unchatbar.css': [
     //         '.tmp/styles/{,*/}*.css'
     //       ]
     //     }
@@ -326,6 +353,11 @@ module.exports = function (grunt) {
           cwd: '.tmp/images',
           dest: '<%= yeoman.dist %>/images',
           src: ['generated/*']
+        }, {
+          expand: true,
+          cwd: '.',
+          src: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
+          dest: '<%= yeoman.dist %>'
         }]
       },
       styles: {
@@ -339,13 +371,13 @@ module.exports = function (grunt) {
     // Run some tasks in parallel to speed up the build process
     concurrent: {
       server: [
-        'copy:styles'
+        'compass:server'
       ],
       test: [
-        'copy:styles'
+        'compass'
       ],
       dist: [
-        'copy:styles',
+        'compass:dist',
         'imagemin',
         'svgmin'
       ]
