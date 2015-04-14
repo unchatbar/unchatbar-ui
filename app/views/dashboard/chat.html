@@ -1,10 +1,9 @@
 <div class="content-container">
 
-  <!-- HEADER -->
-  <div class="page-header">
-    <h2>Chat</h2>
-  </div>
-  <!-- END OF HEADER -->
+  <!-- ALERT -->
+  <alert data-ng-repeat="alert in chat.alerts" type="{{ alert.type }}" close="closeAlert($index)">{{ alert.message }}
+  </alert>
+  <!-- END OF ALERT -->
 
   <!-- CONTENT -->
   <div class="page-content">
@@ -12,12 +11,13 @@
 
       <div class="panel-heading">
         <div class="panel-control">
-          <a href="#"  class="btn btn-sm">
+          <a href="#" class="btn btn-sm" data-ng-click="addAlert('War Machine is calling.')">
             <i class="fa fa-phone"></i>
           </a>
-          <a href="#"  class="btn btn-sm">
+          <a href="#" class="btn btn-sm" data-ng-click="addAlert('War Machine is calling.')">
             <i class="fa fa-video-camera"></i>
           </a>
+
           <div class="btn-group" dropdown>
             <a href="#" class="dropdown-toggle btn btn-sm" dropdown-toggle>
               <i class="fa fa-gear"></i>
@@ -36,115 +36,19 @@
       </div>
 
       <div class="panel-body">
-        <ul class="list-unstyled">
+        <ul data-ng-repeat="message in chat.messages" class="list-unstyled">
           <li class="mar-btm">
-            <div class="media-left">
-              <img src="images/thor.png" class="img-circle img-sm" alt="Profile Picture">
+            <div class="media-{{ message.align }}">
+              <img class="img-circle img-sm" src="{{ message._links.avatar.href }}" alt="{{ message.sender }}">
             </div>
-            <div class="media-body pad-hor">
+            <div class="media-body pad-hor speech-{{ message.align }}">
               <div class="speech">
-                <a href="#" class="media-heading">Thor</a>
-                <p>Hello War Machine, how can I help you today?</p>
+                <a href="#" class="media-heading">{{ message.sender }}</a>
+
+                <p>{{message.text}}</p>
+
                 <p class="speech-time">
-                  <i class="fa fa-clock-o fa-fw"></i> 09:23
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="mar-btm">
-            <div class="media-right">
-              <img src="images/war-machine.png" class="img-circle img-sm" alt="Profile Picture">
-            </div>
-            <div class="media-body pad-hor speech-right">
-              <div class="speech">
-                <a href="#" class="media-heading">War Machine</a>
-                <p>Hi, I want to buy a new weapon.</p>
-                <p class="speech-time">
-                  <i class="fa fa-clock-o fa-fw"></i> 09:23
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="mar-btm">
-            <div class="media-left">
-              <img src="images/thor.png" class="img-circle img-sm" alt="Profile Picture">
-            </div>
-            <div class="media-body pad-hor">
-              <div class="speech">
-                <a href="#" class="media-heading">Thor</a>
-                <p>Shipment is free. You'll get your weapon tomorrow!</p>
-                <p class="speech-time">
-                  <i class="fa fa-clock-o fa-fw"></i> 09:25
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="mar-btm">
-            <div class="media-right">
-              <img src="images/war-machine.png" class="img-circle img-sm" alt="Profile Picture">
-            </div>
-            <div class="media-body pad-hor speech-right">
-              <div class="speech">
-                <a href="#" class="media-heading">War Machine</a>
-                <p>Wow, that's great!</p>
-                <p class="speech-time">
-                  <i class="fa fa-clock-o fa-fw"></i> 09:27
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="mar-btm">
-            <div class="media-right">
-              <img src="images/war-machine.png" class="img-circle img-sm" alt="Profile Picture">
-            </div>
-            <div class="media-body pad-hor speech-right">
-              <div class="speech">
-                <a href="#" class="media-heading">War Machine</a>
-                <p>Ok. Thanks for the answer. Appreciated.</p>
-                <p class="speech-time">
-                  <i class="fa fa-clock-o fa-fw"></i> 09:28
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="mar-btm">
-            <div class="media-left">
-              <img src="images/thor.png" class="img-circle img-sm" alt="Profile Picture">
-            </div>
-            <div class="media-body pad-hor">
-              <div class="speech">
-                <a href="#" class="media-heading">Thor</a>
-                <p>You are welcome! <br> Is there anything else I can do for you today?</p>
-                <p class="speech-time">
-                  <i class="fa fa-clock-o fa-fw"></i> 09:30
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="mar-btm">
-            <div class="media-right">
-              <img src="images/war-machine.png" class="img-circle img-sm" alt="Profile Picture">
-            </div>
-            <div class="media-body pad-hor speech-right">
-              <div class="speech">
-                <a href="#" class="media-heading">War Machine</a>
-                <p>Nope, That's it.</p>
-                <p class="speech-time">
-                  <i class="fa fa-clock-o fa-fw"></i> 09:31
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="mar-btm">
-            <div class="media-left">
-              <img src="images/thor.png" class="img-circle img-sm" alt="Profile Picture">
-            </div>
-            <div class="media-body pad-hor">
-              <div class="speech">
-                <a href="#" class="media-heading">Thor</a>
-                <p>Thank you for contacting us today</p>
-                <p class="speech-time">
-                  <i class="fa fa-clock-o fa-fw"></i> 09:32
+                  <i class="fa fa-clock-o fa-fw"></i> {{ message.date }}
                 </p>
               </div>
             </div>

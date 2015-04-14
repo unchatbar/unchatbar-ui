@@ -3,44 +3,14 @@ body {
   min-width: 100%;
   min-height: 100%;
   width: auto;
-  height: auto
+  height: auto;
 }
 
 html {
   -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased !important
+  -webkit-font-smoothing: antialiased !important;
 }
 
 body {
-  background-color: #e6ebf2;
-  font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 12px;
   font-weight: 300;
-  color: #404040
-}
-
-a {
-  color: #444;
-  text-decoration: none;
-  outline: 0
-}
-
-a:focus,
-a:hover {
-  color: #333;
-  text-decoration: none;
-  outline: 0 !important
-}
-
-button,
-button:focus {
-  outline: 0 !important
-}
-
-label {
-  font-weight: 400
-}
-
-hr {
-  border-color: rgba(0, 0, 0, .15);
 }

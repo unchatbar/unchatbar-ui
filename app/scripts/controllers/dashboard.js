@@ -19,7 +19,7 @@ angular.module('unchatbar')
 
     $scope.header = {
       messages: [{
-        '_links': {
+        _links: {
           avatar: {
             href: 'images/agent-coulson.png'
           }
@@ -28,7 +28,7 @@ angular.module('unchatbar')
         text: 'Agent Coulson sent you a message',
         date: 'some seconds ago'
       }, {
-        '_links': {
+        _links: {
           avatar: {
             href: 'images/black-widow.png'
           }
@@ -37,7 +37,7 @@ angular.module('unchatbar')
         text: 'Black widow sent you a message',
         date: '3 minutes ago'
       }, {
-        '_links': {
+        _links: {
           avatar: {
             href: 'images/captain-america.png'
           }
@@ -46,7 +46,7 @@ angular.module('unchatbar')
         text: 'Captain America sent you a message',
         date: '5 minutes ago'
       }, {
-        '_links': {
+        _links: {
           avatar: {
             href: 'images/giant-man.png'
           }
@@ -55,6 +55,105 @@ angular.module('unchatbar')
         text: 'Giant Man sent you a message',
         date: '15 minutes ago'
       }]
+    };
+
+    $scope.chat = {
+      alerts: [{
+        type: 'info',
+        message: 'War Machine is calling.'
+      }],
+      messages: [{
+        '_links': {
+          avatar: {
+            href: 'images/thor.png'
+          }
+        },
+        align: 'left',
+        sender: 'Thor',
+        text: 'Hello War Machine, how can I help you today?',
+        date: '09:23'
+      }, {
+        '_links': {
+          avatar: {
+            href: 'images/war-machine.png'
+          }
+        },
+        align: 'right',
+        sender: 'War Machine',
+        text: 'Hi, I want to buy a new weapon.',
+        date: '09:23'
+      }, {
+        '_links': {
+          avatar: {
+            href: 'images/thor.png'
+          }
+        },
+        align: 'left',
+        sender: 'Thor',
+        text: 'Shipment is free. You\'ll get your weapon tomorrow!',
+        date: '09:25'
+      }, {
+        '_links': {
+          avatar: {
+            href: 'images/war-machine.png'
+          }
+        },
+        align: 'right',
+        sender: 'War Machine',
+        text: 'Wow, that\'s great!',
+        date: '09:27'
+      }, {
+        '_links': {
+          avatar: {
+            href: 'images/war-machine.png'
+          }
+        },
+        align: 'right',
+        sender: 'War Machine',
+        text: 'Ok. Thanks for the answer. Appreciated.',
+        date: '09:28'
+      }, {
+        '_links': {
+          avatar: {
+            href: 'images/thor.png'
+          }
+        },
+        align: 'left',
+        sender: 'Thor',
+        text: 'You are welcome! <br> Is there anything else I can do for you today?',
+        date: '09:30'
+      }, {
+        '_links': {
+          avatar: {
+            href: 'images/war-machine.png'
+          }
+        },
+        align: 'right',
+        sender: 'War Machine',
+        text: 'Nope, That\'s it.',
+        date: '09:31'
+      }, {
+        '_links': {
+          avatar: {
+            href: 'images/thor.png'
+          }
+        },
+        align: 'left',
+        sender: 'Thor',
+        text: 'Thank you for contacting us today.',
+        date: '09:32'
+      }]
+    };
+
+    $scope.addAlert = function (message) {
+      $scope.chat.alerts.push({
+        type: 'info',
+        message: message
+      });
+    };
+
+    $scope.closeAlert = function (index) {
+      $scope.chat.alerts.splice(index, 1);
     };
 
   });

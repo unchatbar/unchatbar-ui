@@ -1,9 +1,9 @@
 .navbar-container-top {
-  box-shadow: 0 2px 0 -1px rgba(0, 0, 0, .1)
+  box-shadow: 0 2px 0 -1px rgba(0, 0, 0, .1);
 }
 
 .navbar-container-top > .navbar-header {
-  background-color: #2e3033
+  background-color: $sidebar-bg-dark;
 }
 
 .navbar-brand {
@@ -67,7 +67,7 @@
 }
 
 .navbar-nav-top > li.toggle-button > a {
-  color: #aaadb3
+  color: $sidebar-link-color;
 }
 
 .navbar-nav-top > li.toggle-button > a:focus,

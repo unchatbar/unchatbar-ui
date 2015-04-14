@@ -1,30 +1,30 @@
 .badge-default {
-  background-color: #e3e8ee;
-  color: #333
+  background-color: $brand-default;
+  color: $brand-inverse;
 }
 
 .badge-inverse {
-  background-color: #3b3e46
+  background-color: $brand-inverse;
 }
 
 .badge-primary {
-  background-color: #458fd2
+  background-color: $brand-primary;
 }
 
 .badge-success {
-  background-color: #8cc152
+  background-color: $brand-success;
 }
 
 .badge-info {
-  background-color: #3bb5e8
+  background-color: $brand-info;
 }
 
 .badge-warning {
-  background-color: #feab34
+  background-color: $brand-warning
 }
 
 .badge-danger {
-  background-color: #e9573f
+  background-color: $brand-danger;
 }
 
 .badge:empty.badge-icon {
