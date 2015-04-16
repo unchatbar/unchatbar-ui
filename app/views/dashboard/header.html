@@ -29,13 +29,13 @@
         <!-- Dropdown button -->
         <a href="#" class="dropdown-toggle" dropdown-toggle>
           <i class="fa fa-envelope fa-lg"></i>
-          <span class="badge badge-primary">4</span>
+          <span class="badge badge-primary">{{ header.messages.length }}</span>
         </a>
 
         <!-- Dropdown menu -->
         <ul class="dropdown-menu dropdown-menu-left with-arrow" role="menu">
           <li class="dropdown-header pad-all">
-            <span class="text-lg text-muted text-thin">You have 4 messages</span>
+            <span class="text-lg text-muted text-thin">You have {{ header.messages.length }} messages</span>
           </li>
           <li class="divider mar-no"></li>
           <li data-ng-repeat="message in header.messages">

@@ -36,8 +36,8 @@
       </div>
 
       <div class="panel-body">
-        <ul data-ng-repeat="message in chat.messages" class="list-unstyled">
-          <li class="mar-btm">
+        <ul class="list-unstyled">
+          <li data-ng-repeat="message in chat.messages" class="mar-btm">
             <div class="media-{{ message.align }}">
               <img class="img-circle img-sm" src="{{ message._links.avatar.href }}" alt="{{ message.sender }}">
             </div>

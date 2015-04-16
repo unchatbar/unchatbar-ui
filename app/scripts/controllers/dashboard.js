@@ -57,6 +57,71 @@ angular.module('unchatbar')
       }]
     };
 
+    $scope.sidebar = {
+      users: {
+        online: [{
+          _links: {
+            avatar: {
+              href: 'images/hawkeye.png'
+            }
+          },
+          name: 'Hawkeye',
+          status: 'Availabe'
+        }, {
+          _links: {
+            avatar: {
+              href: 'images/hulk.png'
+            }
+          },
+          name: 'Hulk',
+          status: 'Don\'t make me angry!'
+        }, {
+          _links: {
+            avatar: {
+              href: 'images/iron-man.png'
+            }
+          },
+          name: 'Iron Man',
+          status: 'I am Iron Man!'
+        }],
+        offline: [{
+          name: 'Captain America'
+        }, {
+          name: 'Giant Man'
+        }, {
+          name: 'Black Widow'
+        }, {
+          name: 'Loki'
+        }]
+      },
+      groups: {
+        online: [{
+          _links: {
+            avatar: {
+              href: 'images/loki.png'
+            }
+          },
+          name: 'Development',
+          status: 'We rule!'
+        }, {
+          _links: {
+            avatar: {
+              href: 'images/nick-fury.png'
+            }
+          },
+          name: 'Support',
+          status: 'How can we help?'
+        }],
+        offline: [{
+          name: 'Administration'
+        }, {
+          name: 'Marketing'
+        }, {
+          name: 'Sales'
+        }]
+      }
+    };
+
     $scope.chat = {
       alerts: [{
         type: 'info',
